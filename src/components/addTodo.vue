@@ -1,26 +1,26 @@
 <template>
-     <form @submit="AddNewTodo">
+     <form >
     <div>
-        <EnterTodo :input="todo"/>
-        <ButtonClick text="Add Todo"/>
+        <Input type ="text" v-model="todo" @textChange="AddNewTodo"  />
+        <Button text="Add Todo"/>
 
     </div>
     </form>
 </template>
 <script>
-import EnterTodo from './EnterTodo.vue'
-import ButtonClick from './ButtonClick.vue'
+import Input from './Input.vue'
+import Button from './Button.vue'
 
 export default {
      name: 'AddTodo',
   components: {
     
-    EnterTodo,
-    ButtonClick
+    Input,
+    Button
 },
 data(){
  return{
-    todo :'',
+    todo :' ',
  }
 },
 methods:{

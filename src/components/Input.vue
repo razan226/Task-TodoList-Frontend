@@ -1,6 +1,5 @@
 <template>
-    <input :value="textValue" @input="$emit('input' ,
-    $event)" type="text" placeholder="Add Todo"/>
+    <input v-model="text" type="type" placeholder="Add Task"/>
     
 </template>
 <script>
@@ -9,7 +8,19 @@ export default {
 
     name: "TextInput",
     props :{
-    input: String ,
+    Type: String,
+    placeholder: String,
+
+    },
+    data(){
+      return{
+        text: " ",
+      }
+    },
+    watch:{
+      text(newValue){
+        this.$emit("textChange" , newValue);
+      }
     }
     
 }

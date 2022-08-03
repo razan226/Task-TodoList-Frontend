@@ -39,7 +39,7 @@ body {
   width: 100%;
   position:absolute;
   background: scroll;
-  background: black;
+  background: rgb(111, 229, 225);
 
 }
 

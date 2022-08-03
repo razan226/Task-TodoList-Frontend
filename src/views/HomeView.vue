@@ -1,7 +1,6 @@
 <template>
   <div  class="FLEX" :style="{ flexDirection:flexDirection, alignItems:alignItems, justifyContent:justifyContent }">  
     <nav>
-      <router-link to="/">Home</router-link> 
     </nav>
       <HomePage title= "Todo List Task"/>
 

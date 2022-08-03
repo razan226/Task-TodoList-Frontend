@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-   
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/y">About</router-link>
-    </nav>
+    
     <router-view/>
   </div>
 </template>
@@ -19,7 +15,7 @@
 }
 
 nav {
-  padding: 30px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 nav a {
@@ -28,6 +24,24 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: wheat;
 }
+
+*{
+box-sizing: border-box;
+
+
+}
+body {
+  
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  background: scroll;
+  background: black;
+
+}
+
+
 </style>

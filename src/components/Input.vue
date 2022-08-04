@@ -35,7 +35,7 @@ input {
   
   background: white;
   font-size: inherit;
-  color: black;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
   
 

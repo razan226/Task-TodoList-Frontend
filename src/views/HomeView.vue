@@ -1,22 +1,26 @@
 <template>
   <div id="homeView" >  
     <div>
-    <form v-on:submit.prevent="AddNewTodo">
+    <form id="form" v-on:submit.prevent="AddNewTodo">
     <div>
-        <Input id="Input" type ="text"  @textChange="SaveTextFromInput" Inputplaceholder="Add Task" />
-        <Button id="button" text="Add Todo"/>        
+        <Input id="Input" type ="text"  @textChange="SaveTextFromInput" Inputplaceholder="Enter Your Main List Name..." />
+        <Button id="button" />   
+            
     </div>
        </form>
        </div>
        <div id="MainListFlex">
-            <MainListCard />
- <MainListCard />
+            <MainListCard v-for="mainList in mainLists" :mainList="mainList" :key="mainList.id" />
+ 
     </div>
+    <Footer/>
+    
   </div>
 
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue'
 import Input from '@/components/Input.vue'
 import Button from '@/components/Button.vue'
 import MainListCard from '@/components/MainListCard.vue'
@@ -29,7 +33,9 @@ export default {
      components: {
     Input,
     Button,
-    MainListCard
+    MainListCard,
+    Footer
+    
 },
 data(){
  return{
@@ -40,15 +46,31 @@ data(){
 },
 
 created(){
-  this.mainList = [
+  this.mainLists = [
     {
       id :1 ,
-      text :"Doctors Appointment"
+      name :"Studying"
     },
     {
       id:2 ,
-      text :"HomeWork"
-    }
+      name :"Gym"
+    },
+     {
+      id :3 ,
+      name :"Shopping"
+    },
+    {
+      id:4 ,
+      name :"Family Time"
+    },
+     {
+      id :5 ,
+      name :"FriendsTime"
+    },
+    {
+      id:6 ,
+      name :"Leisure Time"
+    },
   ]
 },
 methods:{
@@ -85,23 +107,44 @@ methods:{
 </script>
 <style>
 #Input{
-  width:50%;
-  
+  width:700px;
+  height: 40px;
+  padding:20px;
+  border-radius: 5px;
+  border-color:rgb(202, 241, 252) ;
+
 }
+
+#button{
+  
+  width:90px;
+  padding: 10px;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
 #homeView{
   display : flex ;
   flex-direction: column;
-  
   align-items:center;
   width: 100%;
   height: 100%;
-
+  gap:10px;
+    
 }
+
 #MainListFlex{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 20px;
+  width:  100%;
+  height: 100%;
+ justify-content: center;
+   flex-wrap: wrap;
+ 
+}
+#form{
+  margin-top: 10px;
 }
 
 

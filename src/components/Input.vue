@@ -1,5 +1,8 @@
 <template>
-    <input v-model="text" type="type" placeholder="Add Task"/>
+
+    <input v-model="text" :type="type" :placeholder="Inputplaceholder"/>
+    
+    
     
 </template>
 <script>
@@ -8,18 +11,19 @@ export default {
 
     name: "TextInput",
     props :{
-    Type: String,
-    placeholder: String,
+    type: String,
+    Inputplaceholder: String,
 
     },
     data(){
       return{
-        text: " ",
+        text:"",
       }
     },
     watch:{
       text(newValue){
         this.$emit("textChange" , newValue);
+        
       }
     }
     

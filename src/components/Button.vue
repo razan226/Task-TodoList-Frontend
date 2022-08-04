@@ -29,8 +29,8 @@ button {
 background: orange;
   font-size: inherit;
   color: white;
-  width: 20%;
-  padding: 2%;
+  
+  
  border-color: white;
 
 

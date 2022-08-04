@@ -30,16 +30,17 @@ export default {
   color:red
 }
 .mainList {
-  display: flex;
-  flex-direction: column;
+   display: flex;
+        flex-direction: column;
   justify-content: space-around;
   background: #f4f4f4;
   cursor: pointer;
   width: 200px;
   height: 250px;
-  position: absolute;
+  text-align: center;
+  
   border: 1px solid red;
-   border-radius: 15px;
+   border-radius: 20px;
 }
 
 

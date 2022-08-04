@@ -36,8 +36,7 @@ input {
   background: white;
   font-size: inherit;
   color: black;
-  width: 50%;
-  padding: 2%;
+  
   
 
   

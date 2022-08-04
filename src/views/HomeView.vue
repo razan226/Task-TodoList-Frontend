@@ -3,14 +3,17 @@
     <div>
     <form v-on:submit.prevent="AddNewTodo">
     <div>
-        <Input type ="text"  @textChange="SaveTextFromInput" Inputplaceholder="Add Task" />
-        <Button text="Add Todo"/>        
+        <Input id="Input" type ="text"  @textChange="SaveTextFromInput" Inputplaceholder="Add Task" />
+        <Button id="button" text="Add Todo"/>        
     </div>
        </form>
        </div>
+       <div id="MainListFlex">
             <MainListCard />
-    
+ <MainListCard />
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -81,13 +84,24 @@ methods:{
 }
 </script>
 <style>
+#Input{
+  width:50%;
+  
+}
 #homeView{
   display : flex ;
   flex-direction: column;
-  justify-content: space-around;
+  
+  align-items:center;
   width: 100%;
   height: 100%;
 
+}
+#MainListFlex{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 

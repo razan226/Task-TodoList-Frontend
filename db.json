@@ -1,19 +1,36 @@
 {
-  "posts": [
+  "mainList": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "glmhlgm",
+      "id": 2
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "rrr",
+      "id": 3
+    },
+    {
+      "name": "rrr",
+      "id": 4
+    },
+    {
+      "name": "uuuuuuuu",
+      "id": 5
+    },
+    {
+      "name": "hh",
+      "id": 6
+    },
+    {
+      "name": "dsd",
+      "id": 7
+    },
+    {
+      "name": "mnk",
+      "id": 8
+    },
+    {
+      "name": "mnkhgh",
+      "id": 9
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

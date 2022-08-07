@@ -24,7 +24,7 @@
 import Input from '@/components/Input.vue'
 import Button from '@/components/Button.vue'
 import MainListCard from '@/components/MainListCard.vue'
-
+import axios from "axios"
 
 
 
@@ -40,51 +40,16 @@ export default {
 data(){
  return{
     todoName :'',
-    mainLists: []
+    mainLists:[]
     
  }
 },
+mounted(){
+this.fetchData()
 
-created(){
-  this.mainLists = [
-    {
-      id :1 ,
-      name :"Studying"
-    },
-    {
-      id:2 ,
-      name :"Gym"
-    },
-     {
-      id :3 ,
-      name :"Shopping"
-    },
-    {
-      id:4 ,
-      name :"Family Time"
-    },
-     {
-      id :5 ,
-      name :"FriendsTime"
-    },
-    {
-      id:6 ,
-      name :"Leisure Time"
-    },
-        {
-      id:7 ,
-      name :"Family Time"
-    },
-     {
-      id :8 ,
-      name :"FriendsTime"
-    },
-    {
-      id:9 ,
-      name :"Leisure Time"
-    },
-  ]
-},
+      },
+
+
 methods:{
   SaveTextFromInput(text){
    this.todoName =text 
@@ -98,22 +63,37 @@ methods:{
         
       }
       else{
-       alert(this.todoName)
-      
-      
+        
+  const url = `${this.$BaseURL}/mainList`;
+  axios.post(url ,{
+    name: this.todoName
+    
 
-      const newTodo ={
-        id : Math.random(),
-        text :this.todoName ,
+  })
+  .then(response=>{
+    console.log(response);
+    this.fetchData()
+  })
 
-      }
-      this.$emit('add-task', newTodo)
-      this.todoName =''
-      
-      
+  .catch(function (error) {
+    console.log(error);
+  });
+
       }
 },
 
+
+fetchData(){
+  const url = `${this.$BaseURL}/mainList`;
+  axios.get(url)
+  .then (response=>{
+    console.log(response.data);
+     this.mainLists=response.data
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 }
 }
 </script>

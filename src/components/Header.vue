@@ -20,17 +20,17 @@ export default {
 
 <style>
 .active{
-  background: yellow;
+  color: rgb(48, 135, 81);
 }
 
 h2{
-   color: yellow;
+   color: rgb(247, 198, 198);
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 li ,a {
   font-family: "Montserrat" ,sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 16px;
   text-decoration: none;
   color:white;

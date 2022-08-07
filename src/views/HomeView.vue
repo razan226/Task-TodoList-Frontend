@@ -13,14 +13,14 @@
             <MainListCard v-for="mainList in mainLists" :mainList="mainList" :key="mainList.id" />
  
     </div>
-    <Footer/>
+    
     
   </div>
 
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
+
 import Input from '@/components/Input.vue'
 import Button from '@/components/Button.vue'
 import MainListCard from '@/components/MainListCard.vue'
@@ -34,7 +34,7 @@ export default {
     Input,
     Button,
     MainListCard,
-    Footer
+    
     
 },
 data(){
@@ -69,6 +69,18 @@ created(){
     },
     {
       id:6 ,
+      name :"Leisure Time"
+    },
+        {
+      id:7 ,
+      name :"Family Time"
+    },
+     {
+      id :8 ,
+      name :"FriendsTime"
+    },
+    {
+      id:9 ,
       name :"Leisure Time"
     },
   ]
@@ -138,9 +150,11 @@ methods:{
   flex-direction: row;
   gap: 20px;
   width:  100%;
-  height: 100%;
- justify-content: center;
-   flex-wrap: wrap;
+  min-height: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  
  
 }
 #form{

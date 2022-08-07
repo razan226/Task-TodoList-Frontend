@@ -26,7 +26,7 @@ export default{
 button {
   
   
-background: yellow;
+background: rgb(247, 198, 198);
   font-size: inherit;
   color: white;
   

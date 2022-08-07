@@ -43,11 +43,11 @@ export default {
   background: #f4f4f4;
   color:#f4f4f4;
   width: 300px;
-  height: 350px;
+  height: 250px;
   text-align: center;
   border: 1px solid white;
   border-radius: 20px;
-  background-image: url("C:\Users\Razan Abufara\Desktop\img.jpg") ;
+  background-image: url("../assets/img.jpg") ;
   background-repeat: no-repeat;
   text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 0, 153), 0 0 5px darkblue;
 

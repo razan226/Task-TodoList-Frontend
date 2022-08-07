@@ -2,7 +2,7 @@
   <div id="app">
      <Header/>
       <router-view/>
-      
+      <Footer/>
       </div>
       
 </template>
@@ -11,6 +11,7 @@
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 export default {
     name: "APP",
     props: {
@@ -18,6 +19,7 @@ export default {
     },
     components:{
     Header,
+    Footer
     
         
     },
@@ -26,27 +28,34 @@ export default {
 </script>
 <style>
 #app {
+  display:flex ;
+  flex-direction: column;
+  justify-content: space-around;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f6ebf5;
-  position: fixed;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
-  overflow: scroll;
+  gap:10px;
+  
 }
 body {
+
   margin: 0;
-  height: 100%;
+  padding: 0;
   width: 100%;
-  position:absolute;
-  background: scroll;
-  background-color:rgb(252, 251, 253);
+  min-height: 100%;
+  overflow: scroll;
+  
+  
   
 
 }
+html {
+    height: 100%;
+}
+
  
 
 </style>

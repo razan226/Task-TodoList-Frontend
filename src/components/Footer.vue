@@ -25,8 +25,9 @@ footer {
    width:100%;
    height:60px;   /* Height of the footer */
    background:rgb(36, 157, 151);
-   text-align: center;
- margin-top:auto ;
+    text-align: center;
+    margin-top:80vh ;
+ 
   
 }
 </style>

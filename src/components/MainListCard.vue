@@ -1,10 +1,7 @@
 <template>
    <div class="mainList">
     <h3>{{mainList.name}}</h3>
-    
-    <i id ="icon" class="fa-solid fa-trash fa-2x" ></i>
-    
-    
+    <i id ="icon" @click="onDelete(mainList.id)" class="fa-solid fa-trash fa-2x" ></i>
     </div>
 </template>
 
@@ -17,6 +14,12 @@ export default {
     {
       mainList: {}  
     },
+    methods:{
+      onDelete(id){
+        this.$emit('delete-todo',id)
+        console.log(id)
+      }
+    }
    
    
 

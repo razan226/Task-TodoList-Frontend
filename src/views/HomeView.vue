@@ -1,22 +1,30 @@
 <template>
-  <div id="homeView" >  
+  <div id="homeView">
     <div>
-    <form id="form" v-on:submit.prevent="AddNewTodo">
-    <div>
-        <Input id="Input" type ="text"  @textChange="SaveTextFromInput" Inputplaceholder="Enter Your Main List Name..." />
-        <Button id="button" />   
-            
+      <form id="form" v-on:submit.prevent="AddNewTodo">
+        <div>
+          <Input
+          ref="input"
+            id="Input"
+            type="text"
+            :text="todoName"
+            @textChange="SaveTextFromInput"
+            Inputplaceholder="Enter Your Main List Name..."
+          />
+          <Button id="button" />
+        </div>
+      </form>
     </div>
-       </form>
-       </div>
-       <div id="MainListFlex">
-            <MainListCard v-for="mainList in mainLists" :mainList="mainList" :key="mainList.id" />
- 
+    <div id="MainListFlex">
+      <MainListCard
+         
+        @delete-todo="deleteTodo"
+        v-for="mainList in mainLists"
+        :mainList="mainList"
+        :key="mainList.id"
+      />
     </div>
-    
-    
   </div>
-
 </template>
 
 <script>
@@ -34,14 +42,14 @@ export default {
     Input,
     Button,
     MainListCard,
-    
-    
+
+
 },
 data(){
  return{
     todoName :'',
     mainLists:[]
-    
+
  }
 },
 mounted(){
@@ -52,27 +60,51 @@ this.fetchData()
 
 methods:{
   SaveTextFromInput(text){
-   this.todoName =text 
+   this.todoName = text
 
   },
+  deleteTodo(id) {
+    if(confirm('Are you sure')){
+  const url = `${this.$BaseURL}/mainList/${id}`;
+  axios.delete(url)
+
+  .then (response=>{
+    console.log(response);
+    this.fetchData()
+
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+    }
+},
 
      AddNewTodo () {
-     
+
       if (this.todoName=='') {
         alert('Please write your todo')
+        console.log("This is text"+this.$refs.input.text)
         
+
+
       }
       else{
         
+        
+
   const url = `${this.$BaseURL}/mainList`;
   axios.post(url ,{
     name: this.todoName
-    
+
 
   })
   .then(response=>{
+
+
     console.log(response);
     this.fetchData()
+    this.$refs.input.text=''
+
   })
 
   .catch(function (error) {
@@ -80,6 +112,7 @@ methods:{
   });
 
       }
+
 },
 
 
@@ -94,52 +127,46 @@ fetchData(){
     console.log(error);
   });
 }
+
 }
 }
 </script>
 <style>
-#Input{
-  width:700px;
+#Input {
+  width: 700px;
   height: 40px;
-  padding:20px;
+  padding: 20px;
   border-radius: 5px;
-  border-color:rgb(202, 241, 252) ;
-
+  border-color: rgb(202, 241, 252);
 }
 
-#button{
-  
-  width:90px;
+#button {
+  width: 90px;
   padding: 10px;
   border-radius: 12px;
   margin-left: 10px;
 }
 
-#homeView{
-  display : flex ;
+#homeView {
+  display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  gap:10px;
-    
+  gap: 10px;
 }
 
-#MainListFlex{
+#MainListFlex {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  width:  100%;
+  width: 100%;
   min-height: 100%;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  
- 
 }
-#form{
+#form {
   margin-top: 10px;
 }
-
-
 </style>

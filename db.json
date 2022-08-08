@@ -1,36 +1,12 @@
 {
   "mainList": [
     {
-      "name": "glmhlgm",
+      "name": "Gym",
+      "id": 1
+    },
+    {
+      "name": "dd",
       "id": 2
-    },
-    {
-      "name": "rrr",
-      "id": 3
-    },
-    {
-      "name": "rrr",
-      "id": 4
-    },
-    {
-      "name": "uuuuuuuu",
-      "id": 5
-    },
-    {
-      "name": "hh",
-      "id": 6
-    },
-    {
-      "name": "dsd",
-      "id": 7
-    },
-    {
-      "name": "mnk",
-      "id": 8
-    },
-    {
-      "name": "mnkhgh",
-      "id": 9
     }
   ]
 }

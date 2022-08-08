@@ -1,9 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" >{
      <Header/>
       <router-view/>
-      <Footer/>
-      </div>
+      <main><Footer/></main>
+      
+      </div >
       
 </template>
 
@@ -12,6 +13,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+
 export default {
     name: "APP",
     props: {
@@ -37,25 +39,22 @@ export default {
   color: #f6ebf5;
   width: 100%;
   height: 100%;
-  gap:10px;
+  
   
 }
-body {
+body  {
 
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: scroll;
-  
-  
-  
-
 }
+
 html {
     height: 100%;
 }
 
- 
+
 
 </style>

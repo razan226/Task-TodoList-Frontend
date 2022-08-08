@@ -11,6 +11,7 @@ export default {
 
     name: "TextInput",
     props :{
+    text2:String,
     type: String,
     Inputplaceholder: String,
 

@@ -2,11 +2,53 @@
   "mainList": [
     {
       "name": "Gym",
-      "id": 1
+      "id": 2
     },
     {
-      "name": "dd",
-      "id": 2
+      "name": "test1",
+      "id": 3
+    },
+    {
+      "name": "test2",
+      "id": 4
+    }
+  ],
+  "subList": [
+    {
+      "id": "1",
+      "Name": "test",
+      "Description": "Test",
+      "StartDate": "2/8",
+      "EndDate": "2/8",
+      "Priority": "1",
+      "mainListId": "1"
+    },
+    {
+      "id": "2",
+      "Name": "Gym",
+      "Description": "Test",
+      "StartDate": "2/8",
+      "EndDate": "2/8",
+      "Priority": "2",
+      "mainListId": "2"
+    },
+    {
+      "id": "3",
+      "Name": "test3",
+      "Description": "Test",
+      "StartDate": "2/8",
+      "EndDate": "2/8",
+      "Priority": "2",
+      "mainListId": "3"
+    },
+    {
+      "id": "4",
+      "Name": "Gymdd",
+      "Description": "Test",
+      "StartDate": "2/8",
+      "EndDate": "2/8",
+      "Priority": "2",
+      "mainListId": "3"
     }
   ]
 }

@@ -6,6 +6,7 @@
     
 </template>
 <script>
+import { computed } from 'vue';
 
 export default {
 
@@ -26,7 +27,14 @@ export default {
         this.$emit("textChange" , newValue);
         
       }
-    }
+    },
+    computed:{
+       gettext(){
+        
+
+
+       }
+    },
     
 }
 </script>

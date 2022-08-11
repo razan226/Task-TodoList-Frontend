@@ -17,11 +17,12 @@
     </div>
     <div id="MainListFlex">
       <MainListCard
-         
+     
         @delete-todo="deleteTodo"
         v-for="mainList in mainLists"
         :mainList="mainList"
         :key="mainList.id"
+        
       />
     </div>
   </div>
@@ -45,6 +46,7 @@ export default {
 
 
 },
+
 data(){
  return{
     todoName :'',
@@ -126,6 +128,11 @@ fetchData(){
   .catch(function (error) {
     console.log(error);
   });
+},
+GoSubList(){
+  this.$router.push('/MainList'); 
+  
+  console.log("test")
 }
 
 }

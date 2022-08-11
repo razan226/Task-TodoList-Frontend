@@ -1,13 +1,18 @@
 <template>
   <div >
      <header>
-      
       <h2 class="fa-solid fa-list-check" >Todo List</h2>
       <nav>
       <ul class="nav_links">
       <li><a href="#Log">Log In</a></li>
-      <li><a class="active" href="#Home">Home</a></li>
-      <li><a  href="#About">About</a></li></ul>
+
+      <router-link to="/" tag="li">  
+        <a>Home</a>    
+      </router-link>
+      
+      <li><a  href="#About">About</a></li>
+      </ul>
+
        </nav>
       </header>
       </div>
@@ -40,10 +45,11 @@ li ,a {
 }
 header{
   display: flex ;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   flex-direction: row;
-  padding: 20px 10%;
+  width: 100%;
+  padding: 20px ;
   background: rgb(6, 1, 28);
    color :orange
 }

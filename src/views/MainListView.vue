@@ -2,13 +2,13 @@
   <div id="MainView" >
     <div id="header">
           <h1 id="text">{{name+" "+"Todo"}}</h1>
-          <Button id="button" />
-        
+          <Button id="button" @click="showModal=true" class="fa-solid fa-plus" />
       </div>
     <div id="SubListFlex" >
     <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id"/>
     
       </div>
+      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false"/>
     </div >
   
 </template>
@@ -17,20 +17,21 @@
 import SubListCard from '@/components/SubListCard.vue'
 import Button from '@/components/Button.vue'
 import axios from "axios"
+import AddNewSubListModal from '@/components/AddNewSubListModal.vue'
 
 export default {
      name: 'SubList',
      components: {
-     SubListCard,
-     Button,
-
-   
+    SubListCard,
+    Button,
+    AddNewSubListModal
 },
 data(){
     return{
       subLists:{},
       mainListId:'',
-      name:''
+      name:'',
+      showModal:false
     }
   }  , 
 mounted(){
@@ -65,7 +66,9 @@ mounted(){
   .catch(function (error) {
     console.log(error);
   });
-}
+},
+
+
   }
    
 }
@@ -96,6 +99,7 @@ mounted(){
   width: 100%;
   height: 100%;
   margin-top: -30px ;
+  z-index: 0;
 }
 #button {
   width: 130px;

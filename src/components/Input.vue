@@ -6,7 +6,7 @@
     
 </template>
 <script>
-import { computed } from 'vue';
+
 
 export default {
 
@@ -28,13 +28,7 @@ export default {
         
       }
     },
-    computed:{
-       gettext(){
-        
-
-
-       }
-    },
+   
     
 }
 </script>

@@ -3,7 +3,7 @@
      <header>
       <h2 class="fa-solid fa-list-check" >Todo List</h2>
       <nav>
-      <ul class="nav_links">
+      <ul class="nav_links" >
       <li><a href="#Log">Log In</a></li>
 
       <router-link to="/" tag="li">  
@@ -24,8 +24,8 @@ export default {
 </script>
 
 <style>
-.active{
-  color:rgb(244, 170, 170);
+a:active{
+  background:rgb(193, 219, 97);
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 
 }

@@ -11,7 +11,7 @@
             @textChange="SaveTextFromInput"
             Inputplaceholder="Enter Your Main List Name..."
           />
-          <Button id="button" />
+          <Button id="button" class="fa-solid fa-plus"></Button>/>
         </div>
       </form>
     </div>

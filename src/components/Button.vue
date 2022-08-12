@@ -1,5 +1,5 @@
 <template>
-    <button @click="handleClick" class="fa-solid fa-plus">{{text}} </button>
+    <button @click="handleClick" >{{text}} </button>
 </template>
 <script>
 

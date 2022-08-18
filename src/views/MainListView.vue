@@ -1,14 +1,14 @@
 <template>
   <div id="MainView" >
     <div id="header">
-          <h1 id="text">{{name+" "+"Todo"}}</h1>
+          <h2 id="text">{{name+" "+"Todo"}}</h2>
           <Button id="button" @click="showModal=true" class="fa-solid fa-plus" />
       </div>
     <div id="SubListFlex" >
     <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id"/>
     
       </div>
-      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false"/>
+      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false" @HideSubList="hideSubList"/>
     </div >
   
 </template>
@@ -67,18 +67,24 @@ mounted(){
     console.log(error);
   });
 },
-
+hideSubList(){
+     this.showModal=false
+  }
 
   }
+  
    
 }
 </script>
 <style scoped>
 
 #text{
-  font-family:'Times New Roman', Times, serif;
-  color: rgb(60, 61, 153);
-  font-size: 64px;
+  
+  background-color: beige;
+  color:#56774f;
+  font-size: 40px;
+  border-radius:10px;
+
 }
 
 #SubListFlex   {
@@ -102,9 +108,12 @@ mounted(){
   z-index: 0;
 }
 #button {
-  width: 130px;
-  height: 70px;
+width: 90px;
+  padding: 10px;
   border-radius: 12px;
+  margin-left: 10px;
+ background-color: #ffb703;
+
   
   
   

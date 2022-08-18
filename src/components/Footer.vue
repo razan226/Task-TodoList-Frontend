@@ -15,16 +15,21 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 p {
-    color:white;
+    color:#ccd5ae;
+    font-size: 15px;
    
+}
+a{
+  color: #ccd5ae;
+  font-size: 15px;
 }
 footer {
    padding: 10px;
    width:100%;
    height:60px;   /* Height of the footer */
-   background:rgb(36, 157, 151);
+   background:#d4a373;
    text-align: center;
     
  

@@ -1,50 +1,36 @@
 {
   "mainList": [
     {
-      "name": "Gym",
+      "name": "ddddd",
       "id": 2
     },
     {
-      "name": "study",
+      "name": "razan",
       "id": 3
+    },
+    {
+      "name": "razan",
+      "id": 4
     }
   ],
   "subList": [
     {
-      "id": "1",
-      "Name": "test",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "1",
-      "mainListId": "1"
+      "name": "hj",
+      "description": "kl",
+      "createdDate": "Thu, 18 Au",
+      "dueDate": "15/02/2022",
+      "priority": "Medium",
+      "mainListId": "2",
+      "id": 3
     },
     {
-      "id": "2",
-      "Name": "Gym",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "2"
-    },
-    {
-      "id": "3",
-      "Name": "test3",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "3"
-    },
-    {
-      "id": "4",
-      "Name": "Gymdd",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "3"
+      "name": "r",
+      "description": "r",
+      "createdDate": "Thu Aug 18 2022",
+      "dueDate": "14/02/2001",
+      "priority": "High",
+      "mainListId": "2",
+      "id": 4
     }
   ]
 }

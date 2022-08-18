@@ -1,6 +1,14 @@
 <template>
-
-    <input v-model="text" :type="type" :placeholder="Inputplaceholder"/>
+ 
+    <input 
+    v-model="text" 
+    :type="type" 
+    :placeholder="Inputplaceholder"
+     v-validate="rules"
+     name="input"
+     :class="{invalid : errors.has('input') }"
+    
+    />
     
     
     
@@ -15,6 +23,8 @@ export default {
     text2:String,
     type: String,
     Inputplaceholder: String,
+    rules:Object
+    
 
     },
     data(){
@@ -33,7 +43,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.invalid{
+  border-color: red !important;
+}
 input {
   
   background: white;

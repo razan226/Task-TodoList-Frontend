@@ -27,7 +27,7 @@ a{
 }
 footer {
    padding: 10px;
-   width:100%;
+   width:100vw;
    height:60px;   /* Height of the footer */
    background:#d4a373;
    text-align: center;

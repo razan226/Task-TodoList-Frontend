@@ -14,7 +14,7 @@
             :class="{invalid:errors.has('name')}"
             type="text"
             placeholder="Name"
-            v-validate="'required|alpha'"
+            v-validate="'required|alpha_spaces'"
             v-model="SublistToAdd.name"
           />
           <div class="error" v-show="errors.has('name')">
@@ -26,7 +26,7 @@
             :class="{invalid:errors.has('description')}"
             type="text"
             placeholder="Description "
-            v-validate="'required|alpha'"
+            v-validate="'required|alpha_spaces'"
             v-model="SublistToAdd.description"
           />
           <div class="error" a v-show="errors.has('description')">
@@ -48,9 +48,6 @@
           
           </div>
          
-
-
-
           <div class="toggle3-switch" v-on:click="print">
             <input
               type="radio"
@@ -58,6 +55,7 @@
               class="radio1"
               name="toggle3"
               value="Low"
+               :class="SublistToAdd.priority"
               v-model="SublistToAdd.priority"
             />
 
@@ -106,16 +104,19 @@ import axios from "axios"
 
 
 
+
 export default {
   components: {  Button
   },
   data(){
+
  return{
  
+
   SublistToAdd : {
     name :'',
     description:'',
-    createdDate:new Date().toDateString(),
+    createdDate:`${new Date().getMonth()}/${new Date().getDay()}/${new Date().getFullYear()}`,
     dueDate:'',
     priority:'',
     mainListId:this.$route.params.id
@@ -152,6 +153,7 @@ this.SublistToAdd.priority=''
   .then(()=>{
     alert("The subList added successfuly");
     this.HideWindow()
+    this.$emit('RefreshData')
 
 
   })

@@ -1,14 +1,14 @@
 <template>
   <div id="MainView" >
     <div id="header">
-          <h2 id="text">{{name+" "+"Todo"}}</h2>
+          <h2 id="text">{{name}}</h2>
           <Button id="button" @click="showModal=true" class="fa-solid fa-plus" />
       </div>
     <div id="SubListFlex" >
-    <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id"/>
+    <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id" @DeleteSubList="fetchSubLists"/>
     
       </div>
-      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false" @HideSubList="hideSubList"/>
+      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false" @HideSubList="hideSubList" @RefreshData="fetchSubLists"/>
     </div >
   
 </template>

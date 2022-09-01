@@ -7,36 +7,17 @@
     {
       "name": "SHOPPING",
       "id": 3
+    },
+    {
+      "name": "Friends",
+      "id": 4
+    },
+    {
+      "name": "Family",
+      "id": 6
     }
   ],
   "subList": [
-    {
-      "name": "run",
-      "description": "kl",
-      "createdDate": "Thu Aug 18 2022",
-      "dueDate": "15/02/2022",
-      "priority": "Medium",
-      "mainListId": 3,
-      "id": 1
-    },
-    {
-      "name": "sds",
-      "description": "sd",
-      "createdDate": "2022-08-18",
-      "dueDate": "14/02/2001",
-      "priority": "Medium",
-      "mainListId": "3",
-      "id": 2
-    },
-    {
-      "name": "sds",
-      "description": "sd",
-      "createdDate": "2022-08-18T13:40:20.961Z",
-      "dueDate": "15/02/2022",
-      "priority": "Medium",
-      "mainListId": "2",
-      "id": 3
-    },
     {
       "name": "sds",
       "description": "kl",
@@ -45,6 +26,24 @@
       "priority": "Medium",
       "mainListId": "2",
       "id": 4
+    },
+    {
+      "name": "By Books",
+      "description": "To read",
+      "createdDate": "4/7/2022",
+      "dueDate": "14/09/2022",
+      "priority": "Medium",
+      "mainListId": 3,
+      "id": 5
+    },
+    {
+      "name": "By clothes",
+      "description": "for school",
+      "createdDate": "4/7/2022",
+      "dueDate": "15/02/2022",
+      "priority": "High",
+      "mainListId": 3,
+      "id": 6
     }
   ]
 }

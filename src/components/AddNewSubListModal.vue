@@ -116,7 +116,7 @@ export default {
   SublistToAdd : {
     name :'',
     description:'',
-    createdDate:`${new Date().getMonth()}/${new Date().getDay()}/${new Date().getFullYear()}`,
+    createdDate:`${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
     dueDate:'',
     priority:'',
     mainListId:this.$route.params.id

@@ -33,10 +33,9 @@ export default {
   display:flex ;
   flex-direction: column;
   justify-content: space-between;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #f6ebf5;
+  color: #fdfcdc;
   width: 100%;
   min-height: 100vh;
   gap:30px;

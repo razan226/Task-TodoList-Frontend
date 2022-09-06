@@ -1,5 +1,5 @@
 <template>
-    <button @click="handleClick" >{{text}} </button>
+    <button @click="handleClick" class="fa-solid fa-plus">{{text}} </button>
 </template>
 <script>
 
@@ -22,7 +22,7 @@ export default{
 }
 </script>
 
-<style scoped>
+<style>
 button {
   
   

@@ -1,9 +1,9 @@
 <template>
   <div >
      <header>
-      <h1 class="fa-solid fa-list-check" >Todo List</h1>
+      <h2 class="fa-solid fa-list-check" >Todo List</h2>
       <nav>
-      <ul class="nav_links" >
+      <ul class="nav_links">
       <li><a href="#Log">Log In</a></li>
 
       <router-link to="/" tag="li">  
@@ -23,21 +23,20 @@ export default {
 }
 </script>
 
-<style scoped>
-a:active{
-  background:rgb(193, 219, 97);
-    text-shadow: 1px 1px 2px black, 0 0 25px rgb(1, 1, 14), 0 0 5px darkblue;
+<style>
+.active{
+  color:rgb(244, 170, 170);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 
 }
 
-h1{
-   color: #d4a373;
-  text-shadow: 1px 1px 2px black, 0 0 25px rgb(236, 236, 242), 0 0 5px darkblue;
-
+h2{
+   color: rgb(247, 198, 198);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 li ,a {
-  
+  font-family: "Montserrat" ,sans-serif;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
@@ -51,8 +50,8 @@ header{
   flex-direction: row;
   width: 100%;
   padding: 20px ;
-  background: #ccd5ae;
-   
+  background: rgb(6, 1, 28);
+   color :orange
 }
 .nav_links{
   list-style: none;
@@ -65,7 +64,7 @@ header{
 }
 
 .nav_links li a:hover{
-  color:#ffb703;
+  color:rgb(146, 238, 238);
 }
 
 </style>

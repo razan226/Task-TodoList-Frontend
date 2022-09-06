@@ -1,20 +1,12 @@
 <template>
- 
-    <input 
-    v-model="text" 
-    :type="type" 
-    :placeholder="Inputplaceholder"
-     v-validate="rules"
-     name="input"
-     :class="{invalid : errors.has('input') }"
-    
-    />
+
+    <input v-model="text" :type="type" :placeholder="Inputplaceholder"/>
     
     
     
 </template>
 <script>
-
+import { computed } from 'vue';
 
 export default {
 
@@ -23,8 +15,6 @@ export default {
     text2:String,
     type: String,
     Inputplaceholder: String,
-    rules:Object
-    
 
     },
     data(){
@@ -38,15 +28,18 @@ export default {
         
       }
     },
-   
+    computed:{
+       gettext(){
+        
+
+
+       }
+    },
     
 }
 </script>
 
-<style scoped>
-.invalid{
-  border-color: red !important;
-}
+<style>
 input {
   
   background: white;

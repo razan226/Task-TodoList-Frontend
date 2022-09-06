@@ -5,21 +5,17 @@
         <div>
           <Input
           ref="input"
-            id="input"
+            id="Input"
             type="text"
             :text="todoName"
-            :rules="{ required: true , alpha:true}"
             @textChange="SaveTextFromInput"
             Inputplaceholder="Enter Your Main List Name..."
           />
-          <Button id="button" class="fa-solid fa-plus"/>
+          <Button id="button" />
         </div>
       </form>
     </div>
-    <div id="mainListFlex">
-      <div v-if ="mainLists.length==0" >
-        
-        <h1 id="emptyMainList">No Main Lists </h1></div>
+    <div id="MainListFlex">
       <MainListCard
      
         @delete-todo="deleteTodo"
@@ -90,6 +86,9 @@ methods:{
       if (this.todoName=='') {
         alert('Please write your todo')
         console.log("This is text"+this.$refs.input.text)
+        
+
+
       }
       else{
         
@@ -139,19 +138,13 @@ GoSubList(){
 }
 }
 </script>
-<style scoped>
-#input {
+<style>
+#Input {
   width: 700px;
   height: 40px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: rgb(202, 241, 252);
-}
-#emptyMainList{
-  color : black;
-  min-height: 200px;
-  margin-top: 10vh;
-  
 }
 
 #button {
@@ -159,8 +152,6 @@ GoSubList(){
   padding: 10px;
   border-radius: 12px;
   margin-left: 10px;
-background-color: #ffb703;
-
 }
 
 #homeView {
@@ -169,10 +160,10 @@ background-color: #ffb703;
   align-items: center;
   width: 100%;
   height: 100%;
-  gap: 30px;
+  gap: 10px;
 }
 
-#mainListFlex {
+#MainListFlex {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -181,7 +172,6 @@ background-color: #ffb703;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-
 }
 #form {
   margin-top: 10px;

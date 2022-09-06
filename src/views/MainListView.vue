@@ -55,8 +55,12 @@ mounted(){
     
   },
   methods:{
+
     fetchSubLists(){
-    const url = `${this.$BaseURL}/subList?mainListId=${this.mainListId}`;
+       debugger; // eslint-disable-line no-debugger
+      const url = `${this.$BaseURL}/subList/mainList/${this.mainListId}`;
+
+    //const url = `${this.$BaseURL}/subList?mainListId=${this.mainListId}`;
      axios.get(url)
     .then (response=>{
     console.log(response.data);

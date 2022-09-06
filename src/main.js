@@ -6,7 +6,7 @@ import VeeValidate from 'vee-validate';
 
 Vue.config.productionTip = false
 
-Vue.prototype.$BaseURL = 'http://localhost:3000'
+Vue.prototype.$BaseURL = 'https://localhost:5001/api'
 
 Vue.use(VeeValidate);
 

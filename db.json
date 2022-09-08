@@ -1,54 +1,49 @@
 {
   "mainList": [
     {
-      "name": "Gym",
+      "name": "GYM",
       "id": 2
     },
     {
-      "name": "test1",
+      "name": "SHOPPING",
       "id": 3
     },
     {
-      "name": "test2",
+      "name": "Friends",
       "id": 4
+    },
+    {
+      "name": "Family",
+      "id": 6
     }
   ],
   "subList": [
     {
-      "id": "1",
-      "Name": "test",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "1",
-      "mainListId": "1"
+      "name": "sds",
+      "description": "kl",
+      "createdDate": "7/4/2022",
+      "dueDate": "14/02/2001",
+      "priority": "Medium",
+      "mainListId": "2",
+      "id": 4
     },
     {
-      "id": "2",
-      "Name": "Gym",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "2"
+      "name": "By Books",
+      "description": "To read",
+      "createdDate": "4/7/2022",
+      "dueDate": "14/09/2022",
+      "priority": "Medium",
+      "mainListId": 3,
+      "id": 5
     },
     {
-      "id": "3",
-      "Name": "test3",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "3"
-    },
-    {
-      "id": "4",
-      "Name": "Gymdd",
-      "Description": "Test",
-      "StartDate": "2/8",
-      "EndDate": "2/8",
-      "Priority": "2",
-      "mainListId": "3"
+      "name": "By clothes",
+      "description": "for school",
+      "createdDate": "4/7/2022",
+      "dueDate": "15/02/2022",
+      "priority": "High",
+      "mainListId": 3,
+      "id": 6
     }
   ]
 }

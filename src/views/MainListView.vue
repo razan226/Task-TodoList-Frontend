@@ -1,14 +1,14 @@
 <template>
   <div id="MainView" >
     <div id="header">
-          <h1 id="text">{{name+" "+"Todo"}}</h1>
-          <Button id="button" />
-        
+          <h2 id="text">{{name}}</h2>
+          <Button id="button" @click="showModal=true" class="fa-solid fa-plus" />
       </div>
     <div id="SubListFlex" >
-    <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id"/>
+    <SubListCard  v-for="subList in  subLists" :subList="subList"  :key="subList.id" @DeleteSubList="fetchSubLists"/>
     
       </div>
+      <AddNewSubListModal v-show="showModal" @hideModal="showModal=false" @HideSubList="hideSubList" @RefreshData="fetchSubLists"/>
     </div >
   
 </template>
@@ -17,20 +17,21 @@
 import SubListCard from '@/components/SubListCard.vue'
 import Button from '@/components/Button.vue'
 import axios from "axios"
+import AddNewSubListModal from '@/components/AddNewSubListModal.vue'
 
 export default {
      name: 'SubList',
      components: {
-     SubListCard,
-     Button,
-
-   
+    SubListCard,
+    Button,
+    AddNewSubListModal
 },
 data(){
     return{
       subLists:{},
       mainListId:'',
-      name:''
+      name:'',
+      showModal:false
     }
   }  , 
 mounted(){
@@ -65,17 +66,25 @@ mounted(){
   .catch(function (error) {
     console.log(error);
   });
-}
+},
+hideSubList(){
+     this.showModal=false
   }
+
+  }
+  
    
 }
 </script>
 <style scoped>
 
 #text{
-  font-family:'Times New Roman', Times, serif;
-  color: rgb(60, 61, 153);
-  font-size: 64px;
+  
+  background-color: beige;
+  color:#56774f;
+  font-size: 40px;
+  border-radius:10px;
+
 }
 
 #SubListFlex   {
@@ -96,11 +105,15 @@ mounted(){
   width: 100%;
   height: 100%;
   margin-top: -30px ;
+  z-index: 0;
 }
 #button {
-  width: 130px;
-  height: 70px;
+width: 90px;
+  padding: 10px;
   border-radius: 12px;
+  margin-left: 10px;
+ background-color: #ffb703;
+
   
   
   
